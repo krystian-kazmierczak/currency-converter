@@ -12,9 +12,6 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
@@ -22,19 +19,16 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">Kalkulator walutowy</h1>
-    </header>
     <main class="main">
         <form class="form js-form">
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Kalkulator walut</legend>
-                <label class="form__label">Kwota w PLN
+                <label class="form__label">Kwota w PLN*
                     <input class="form__input js-input" placeholder="wpisz kwotę" type="number" min="1" step="any"
                         value="" required name="pln"></label>
             </fieldset>
             <fieldset class="form__fieldset">
-                <label class="form__label">Waluta docelowa
+                <label class="form__label">Waluta docelowa*
                     <select class="form__input js-selectCurrency">
                         <option value="usd">USD</option>
                         <option value="eur">EUR</option>
@@ -50,10 +44,10 @@
             <button class="form__button" type="submit">Przelicz</button>
             <button class="form__button" type="reset">Wyczyść formularz</button>
         </form>
+        <p class="main__paragraph main__paragraph--smaller">Pola wymagane oznaczonę są *</p>
+        <p class="main__paragraph main__paragraph--smaller">Kurs pochodzą z Tabeli NBP nr 084/A/NBP/2021 z dnia 2021-05-04</p>
+        <p class="main__paragraph main__paragraph--smaller main__paragraph--centered">&copy; 2021 Krystian Kaźmierczak</p>
     </main>
-    <footer class="footer">
-        <p>&copy; 2021 Krystian Kaźmierczak</p>
-    </footer>
 </body>
 
 </html>
