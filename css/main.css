@@ -1,9 +1,19 @@
 .main {
-    display: flex;
     background-color: hsl(0deg 0% 92%);
-    width: 100%;
-    max-width: 600px;
+    flex-basis: 600px;
     margin: 0 30px;
-    padding: 20px;
+    padding: 5px 20px;
     box-shadow: -10px 0px 13px -7px hsl(27deg 100% 40%), 10px 0px 13px -7px hsl(27deg 100% 40%), 5px 5px 1px 5px hsl(0deg 0% 0% / 2%);
+}
+
+.main__paragraph {
+    color: hsl(27deg 100% 40%);
+}
+
+.main__paragraph--smaller {
+    font-size: 12px;
+}
+
+.main__paragraph--centered {
+    text-align: center;
 }
