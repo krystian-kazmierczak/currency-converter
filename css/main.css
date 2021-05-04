@@ -1,7 +1,9 @@
 .main {
-    max-width: 600px;
+    display: flex;
+    background-color: hsl(0deg 0% 92%);
     width: 100%;
-    margin: 30px auto;
+    max-width: 600px;
+    margin: 0 30px;
     padding: 20px;
     box-shadow: -10px 0px 13px -7px hsl(27deg 100% 40%), 10px 0px 13px -7px hsl(27deg 100% 40%), 5px 5px 1px 5px hsl(0deg 0% 0% / 2%);
 }
