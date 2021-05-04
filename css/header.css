@@ -1,0 +1,11 @@
+.header {
+    background-color: hsl(27deg 100% 40%);
+    color: hsl(0, 0%, 96%);
+}
+
+.header__title {
+    margin: 0;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}

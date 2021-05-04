@@ -1,0 +1,8 @@
+.footer {
+    margin: 0;
+    background-color: hsl(27deg 100% 40%);
+    color: hsl(0, 0%, 96%);
+    padding: 10px;
+    text-align: center;
+    line-height: 1;
+}

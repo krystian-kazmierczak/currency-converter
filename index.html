@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Kalkulator walut</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Kalkulator walutowy</h1>
+    </header>
+    <main class="main">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Kalkulator walut</legend>
+                <label class="form__label">Kwota w PLN
+                    <input class="form__input js-input" placeholder="wpisz kwotę" type="number" min="1" step="any"
+                        value="" required name="pln"></label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <label class="form__label">Waluta docelowa
+                    <select class="form__input js-selectCurrency">
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="chf">CHF</option>
+                        <option value="try">TRY</option>
+                    </select></label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Po przeliczeniu</legend>
+                <p class="form__paragraph">Otrzymasz:<strong class="js-result"></strong></p>
+            </fieldset>
+            <button class="form__button" type="submit">Przelicz</button>
+            <button class="form__button" type="reset">Wyczyść formularz</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2021 Krystian Kaźmierczak</p>
+    </footer>
+</body>
+
+</html>
