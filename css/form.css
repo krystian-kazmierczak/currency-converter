@@ -23,10 +23,16 @@
 .form__label {
     font-size: 18px;
     color: hsl(27deg 100% 40%);
-    display: inline-block;
-    max-width: 300px;
+    text-align: left;
+    width: 100%;/*
+    margin: 15px 15px 0;*/
+}
+
+.form__labelText{
     width: 100%;
-    margin: 15px 15px 0;
+    max-width: 150px;
+    display: inline-block;
+
 }
 
 .form__paragraph {
@@ -53,7 +59,7 @@
     background-color: hsl(60deg 10% 94%);
     border-color: hsl(27deg 100% 40%);
     outline-color: hsl(27deg 100% 40%);
-    max-width: 350px;
+    max-width: 200px;
     border-radius: 4px;
     width: 100%;
     margin: 15px 0;
