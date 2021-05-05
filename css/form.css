@@ -59,6 +59,7 @@
     background-color: hsl(60deg 10% 94%);
     border-color: hsl(27deg 100% 40%);
     outline-color: hsl(27deg 100% 40%);
+    color: hsl(27deg 100% 40%);
     max-width: 200px;
     border-radius: 4px;
     width: 100%;
