@@ -24,15 +24,13 @@
     font-size: 18px;
     color: hsl(27deg 100% 40%);
     text-align: left;
-    width: 100%;/*
-    margin: 15px 15px 0;*/
+    width: 100%;
 }
 
-.form__labelText{
+.form__labelText {
     width: 100%;
     max-width: 150px;
     display: inline-block;
-
 }
 
 .form__paragraph {
