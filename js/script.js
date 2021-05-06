@@ -1,48 +1,50 @@
-const select = document.querySelector(".js-selectCurrency");
-const form = document.querySelector(".js-form");
-const textResult = document.querySelector(".js-result");
-const input = document.querySelector(".js-input");
+{
+    const calculateResult = (amount, currency) => {
+        const rateUSD = 3.7940;
+        const rateEUR = 4.5539;
+        const rateCHF = 4.1450;
+        const rateGBP = 5.2622;
+        const rateTRY = 0.4558;
 
-form.addEventListener("submit", (event) => {
-
-    event.preventDefault();
-    const priceUSD = 3.7978;
-    const priseEUR = 4.5481;
-    const priceCHF = 4.1279;
-    const priceGBP = 5.2235;
-    const priceTRY = 0.4716;
-
-    const currency = select.value;
-    const rates = input.value;
-    let result;
-    switch (currency) {
-        case "usd":
-            result = (rates / priceUSD).toFixed(2);
-            textResult.innerText = ` ${result} USD.`
-            break;
-        case "eur":
-            result = (rates / priseEUR).toFixed(2);
-            textResult.innerText = ` ${result} EUR.`
-            break;
-        case "gbp":
-            result = (rates / priceGBP).toFixed(2);
-            textResult.innerText = ` ${result} GBP.`
-            break;
-        case "chf":
-            result = (rates / priceCHF).toFixed(2);
-            textResult.innerText = ` ${result} CHF.`
-            break;
-        case "try":
-            result = (rates / priceTRY).toFixed(2);
-            textResult.innerText = ` ${result} TRY.`
-            break;
-        default:
-            textResult.innerText = "Brak kursu waluty";
-
+        switch (currency) {
+            case "usd":
+                return amount / rateUSD;
+            case "eur":
+                return amount / rateEUR;
+            case "gbp":
+                return amount / rateGBP;
+            case "chf":
+                return amount / rateCHF;
+            case "try":
+                return amount / rateTRY;
+        }
     }
 
-});
+    const updateResultText = (result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = `${result.toFixed(2)} ${currency.toUpperCase()}`;
+    }
 
-form.addEventListener("reset", () => {
-    textResult.innerText = ""
-});
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        const currencyElement = document.querySelector(".js-selectCurrency");
+        const amountElement = document.querySelector(".js-amount");
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+        const result = calculateResultText(amount, currency);
+        updateResult(result, currency);
+    }
+
+    const onFormReset = () => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = "";
+    }
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("submit", onFormSubmit);
+        formElement.addEventListener("reset", onFormReset);
+    }
+
+    init();
+}
