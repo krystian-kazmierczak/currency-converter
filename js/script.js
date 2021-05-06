@@ -31,8 +31,8 @@
         const amountElement = document.querySelector(".js-amount");
         const currency = currencyElement.value;
         const amount = +amountElement.value;
-        const result = calculateResultText(amount, currency);
-        updateResult(result, currency);
+        const result = calculateResult(amount, currency);
+        updateResultText(result, currency);
     }
 
     const onFormReset = () => {
